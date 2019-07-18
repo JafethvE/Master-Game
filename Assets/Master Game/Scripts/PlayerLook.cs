@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//We should have a namespace with the name of game in there. This is very useful to keep track of what we made, and prevents same-name issues with asset packages we use.
+
 //PlayerLook is not the greatest class name ever, maybe think about a clearer name?
 public class PlayerLook : MonoBehaviour
 {
