@@ -322,6 +322,7 @@ MonoBehaviour:
   mouseXInputName: Mouse X
   mouseYInputName: Mouse Y
   mouseSensitivity: 50
+  playerBody: {fileID: 1538663915}
 --- !u!81 &1972396299
 AudioListener:
   m_ObjectHideFlags: 0

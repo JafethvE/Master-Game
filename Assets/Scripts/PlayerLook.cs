@@ -1,10 +1,15 @@
-﻿using System.Collections;
+﻿//If you're not using these, they can be removed.
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//PlayerLook is not the greatest class name ever, maybe think about a clearer name?
 public class PlayerLook : MonoBehaviour
 {
+    //Why do these exist? These are constants from Unity itself.
     [SerializeField] private string mouseXInputName, mouseYInputName;
+
+    //This is really good variable naming. Correct casing, clear names. Very well done.
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private Transform playerBody;
 
@@ -16,6 +21,7 @@ public class PlayerLook : MonoBehaviour
         xAxisClamp = 0.0f;
     }
 
+    //Good thinking.
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -26,6 +32,7 @@ public class PlayerLook : MonoBehaviour
         CameraRotation();
     }
 
+    //Always make method names a command. That makes code more readable.
     private void CameraRotation()
     {
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
@@ -49,6 +56,7 @@ public class PlayerLook : MonoBehaviour
         playerBody.Rotate(Vector3.up * mouseX);
     }
 
+    //This is a good method name. It's clear what it does, and is a command.
     private void ClampXAxisRotationToValue(float value)
     {
         Vector3 eulerRotation = transform.eulerAngles;
