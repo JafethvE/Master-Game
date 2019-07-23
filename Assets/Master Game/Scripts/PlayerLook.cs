@@ -31,11 +31,11 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
-        CameraRotation();
+        ControlCamera();
     }
 
     //Always make method names a command. That makes code more readable.
-    private void CameraRotation()
+    private void ControlCamera()
     {
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
